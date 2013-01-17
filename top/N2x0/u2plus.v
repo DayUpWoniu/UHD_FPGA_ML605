@@ -152,7 +152,8 @@ module u2plus
    wire 	clk_fpga, dsp_clk, clk_div, dcm_out, wb_clk, clock_ready;
 
    IBUFGDS clk_fpga_pin (.O(clk_fpga),.I(CLK_FPGA_P),.IB(CLK_FPGA_N));
-   defparam 	clk_fpga_pin.IOSTANDARD = "LVPECL_25";
+   defparam 	clk_fpga_pin.IOSTANDARD = "LVDS_25";
+   //defparam 	clk_fpga_pin.IOSTANDARD = "LVPECL_25";
    
    wire 	exp_time_in;
    IBUFDS exp_time_in_pin (.O(exp_time_in),.I(exp_time_in_p),.IB(exp_time_in_n));
@@ -201,25 +202,26 @@ module u2plus
 `endif // !`ifdef LVDS
    
    // Handle Clocks
-   DCM DCM_INST (.CLKFB(dsp_clk), 
-                 .CLKIN(clk_fpga), 
+   /*
+   DCM DCM_INST (..CLKFB(dsp_clk), 
+                 ..CLKIN(clk_fpga), 
                  .DSSEN(0), 
-                 .PSCLK(0), 
-                 .PSEN(0), 
-                 .PSINCDEC(0), 
-                 .RST(dcm_rst), 
-                 .CLKDV(clk_div), 
-                 .CLKFX(), 
-                 .CLKFX180(), 
-                 .CLK0(dcm_out), 
-                 .CLK2X(), 
-                 .CLK2X180(), 
-                 .CLK90(), 
-                 .CLK180(), 
-                 .CLK270(clk270_100), 
-                 .LOCKED(LOCKED_OUT), 
-                 .PSDONE(), 
-                 .STATUS());
+                 ..PSCLK(0), 
+                 ..PSEN(0), 
+                 ..PSINCDEC(0), 
+                 ..RST(dcm_rst), 
+                 ..CLKDV(clk_div), 
+                 ..CLKFX(), 
+                 ..CLKFX180(), 
+                 ..CLK0(dcm_out), 
+                 ..CLK2X(), 
+                 ..CLK2X180(), 
+                 ..CLK90(), 
+                 ..CLK180(), 
+                 ..CLK270(clk270_100), 
+                 ..LOCKED(LOCKED_OUT), 
+                 ..PSDONE(), 
+                 ..STATUS());
    defparam DCM_INST.CLK_FEEDBACK = "1X";
    defparam DCM_INST.CLKDV_DIVIDE = 2.0;
    defparam DCM_INST.CLKFX_DIVIDE = 1;
@@ -234,6 +236,69 @@ module u2plus
    defparam DCM_INST.FACTORY_JF = 16'h8080;
    defparam DCM_INST.PHASE_SHIFT = 0;
    defparam DCM_INST.STARTUP_WAIT = "FALSE";
+   */
+    MMCM_BASE #(
+    .BANDWIDTH("OPTIMIZED"), // Jitter programming ("HIGH","LOW","OPTIMIZED")
+    .CLKFBOUT_MULT_F(5.0), // Multiply value for all CLKOUT (5.0-64.0).
+    .CLKFBOUT_PHASE(0.0), // Phase offset in degrees of CLKFB (0.00-360.00).
+    .CLKIN1_PERIOD(10.0), // Input clock period in ns to ps resolution (i.e. 33.333 is 30 MHz).
+    .CLKOUT0_DIVIDE_F(1.0), // Divide amount for CLKOUT0 (1.000-128.000).
+    // CLKOUT0_DUTY_CYCLE - CLKOUT6_DUTY_CYCLE: Duty cycle for each CLKOUT (0.01-0.99).
+    .CLKOUT0_DUTY_CYCLE(0.5),
+    .CLKOUT1_DUTY_CYCLE(0.5),
+    .CLKOUT2_DUTY_CYCLE(0.5),
+    .CLKOUT3_DUTY_CYCLE(0.5),
+    .CLKOUT4_DUTY_CYCLE(0.5),
+    .CLKOUT5_DUTY_CYCLE(0.5),
+    .CLKOUT6_DUTY_CYCLE(0.5),
+    // CLKOUT0_PHASE - CLKOUT6_PHASE: Phase offset for each CLKOUT (-360.000-360.000).
+    .CLKOUT0_PHASE(0.0),
+    .CLKOUT1_PHASE(270.0),
+    .CLKOUT2_PHASE(0.0),
+    .CLKOUT3_PHASE(0.0),
+    .CLKOUT4_PHASE(0.0),
+    .CLKOUT5_PHASE(0.0),
+    .CLKOUT6_PHASE(0.0),
+    // CLKOUT1_DIVIDE - CLKOUT6_DIVIDE: Divide amount for each CLKOUT (1-128)
+    .CLKOUT1_DIVIDE(1),
+    .CLKOUT2_DIVIDE(2),
+    .CLKOUT3_DIVIDE(1),
+    .CLKOUT4_DIVIDE(1),
+    .CLKOUT5_DIVIDE(1),
+    .CLKOUT6_DIVIDE(1),
+    .CLKOUT4_CASCADE("FALSE"), // Cascase CLKOUT4 counter with CLKOUT6 (TRUE/FALSE)
+    .CLOCK_HOLD("FALSE"), // Hold VCO Frequency (TRUE/FALSE)
+    .DIVCLK_DIVIDE(1), // Master division value (1-80)
+    .REF_JITTER1(0.0), // Reference input jitter in UI (0.000-0.999).
+    .STARTUP_WAIT("FALSE") // Not supported. Must be set to FALSE.
+    )
+    MMCM_BASE_inst (
+    // Clock Outputs: 1-bit (each) output: User configurable clock outputs
+    .CLKOUT0(dcm_out), // 1-bit output: CLKOUT0 output
+    .CLKOUT0B(), // 1-bit output: Inverted CLKOUT0 output
+    .CLKOUT1(clk270_100), // 1-bit output: CLKOUT1 output
+    .CLKOUT1B(), // 1-bit output: Inverted CLKOUT1 output
+    .CLKOUT2(clk_div), // 1-bit output: CLKOUT2 output
+    .CLKOUT2B(), // 1-bit output: Inverted CLKOUT2 output
+    .CLKOUT3(), // 1-bit output: CLKOUT3 output
+    .CLKOUT3B(), // 1-bit output: Inverted CLKOUT3 output
+    .CLKOUT4(), // 1-bit output: CLKOUT4 output
+    .CLKOUT5(), // 1-bit output: CLKOUT5 output
+    .CLKOUT6(), // 1-bit output: CLKOUT6 output
+    // Feedback Clocks: 1-bit (each) output: Clock feedback ports
+    .CLKFBOUT(), // 1-bit output: Feedback clock output
+    .CLKFBOUTB(), // 1-bit output: Inverted CLKFBOUT output
+    // Status Port: 1-bit (each) output: MMCM status ports
+    .LOCKED(), // 1-bit output: LOCK output
+    // Clock Input: 1-bit (each) input: Clock input
+    .CLKIN1(clk_fpga), 
+    // Control Ports: 1-bit (each) input: MMCM control ports
+    .PWRDWN(0), // 1-bit input: Power-down input
+    .RST(dcm_rst), // 1-bit input: Reset input
+    // Feedback Clocks: 1-bit (each) input: Clock feedback ports
+    .CLKFBIN(dsp_clk) // 1-bit input: Feedback clock input
+    );
+    
 
    BUFG dspclk_BUFG (.I(dcm_out), .O(dsp_clk));
    BUFG wbclk_BUFG (.I(clk_div), .O(wb_clk));
@@ -241,6 +306,7 @@ module u2plus
    // Create clock for external SRAM thats -90degree phase to DSPCLK (i.e) 2nS earlier at 100MHz.
    BUFG  clk270_100_buf_i1 (.I(clk270_100), 
 			    .O(clk270_100_buf));
+   /*
    OFDDRRSE RAM_CLK_i1 (.Q(RAM_CLK),
 			.C0(clk270_100_buf),
 			.C1(~clk270_100_buf),
@@ -249,6 +315,20 @@ module u2plus
 			.D1(1'b0),
 			.R(1'b0),
 			.S(1'b0));
+    */
+    ODDR #(
+        .DDR_CLK_EDGE("OPPOSITE_EDGE"), // "OPPOSITE_EDGE" or "SAME_EDGE"
+        .INIT(1'b0), // Initial value of Q: 1'b0 or 1'b1
+        .SRTYPE("SYNC") // Set/Reset type: "SYNC" or "ASYNC"
+    ) RAM_CLK_i1 (
+    .Q(RAM_CLK), // 1-bit DDR output
+    .C(clk270_100_buf), // 1-bit clock input
+    .CE(1'b1), // 1-bit clock enable input
+    .D1(1'b1), // 1-bit data input (positive edge)
+    .D2(1'b0), // 1-bit data input (negative edge)
+    .R(1'b0), // 1-bit reset
+    .S(1'b0) // 1-bit set
+    );
   
    // I2C -- Don't use external transistors for open drain, the FPGA implements this
    IOBUF scl_pin(.O(scl_pad_i), .IO(SCL), .I(scl_pad_o), .T(scl_pad_oen_o));
@@ -285,7 +365,7 @@ module u2plus
 	GMII_TX_ER <= GMII_TX_ER_unreg;
 	GMII_TXD <= GMII_TXD_unreg;
      end
-
+/*
    OFDDRRSE OFDDRRSE_gmii_inst 
      (.Q(GMII_GTX_CLK),      // Data output (connect directly to top-level port)
       .C0(GMII_GTX_CLK_int),    // 0 degree clock input
@@ -295,7 +375,20 @@ module u2plus
       .D1(1),    // Negedge data input
       .R(0),      // Synchronous reset input
       .S(0)       // Synchronous preset input
-      );
+      ); */
+    ODDR #(
+        .DDR_CLK_EDGE("OPPOSITE_EDGE"), // "OPPOSITE_EDGE" or "SAME_EDGE"
+        .INIT(1'b0), // Initial value of Q: 1'b0 or 1'b1
+        .SRTYPE("SYNC") // Set/Reset type: "SYNC" or "ASYNC"
+    ) ODDR_gmii_inst (
+    .Q(GMII_GTX_CLK), // 1-bit DDR output
+    .C(GMII_GTX_CLK_int), // 1-bit clock input
+    .CE(1'b1), // 1-bit clock enable input
+    .D1(1'b0), // 1-bit data input (positive edge)
+    .D2(1'b1), // 1-bit data input (negative edge)
+    .R(1'b0), // 1-bit reset
+    .S(1'b0) // 1-bit set
+    );
    
    wire ser_tklsb_unreg, ser_tkmsb_unreg;
    wire [15:0] ser_t_unreg;
@@ -349,7 +442,7 @@ module u2plus
 
 	   IOBUF #(
 		   .DRIVE(12),
-		   .IOSTANDARD("LVCMOS25"),
+		   .IOSTANDARD("LVDS_25"),
 		   .SLEW("FAST")
 		   )
 	     RAM_D_i (
