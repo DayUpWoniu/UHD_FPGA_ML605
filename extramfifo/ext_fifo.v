@@ -32,7 +32,7 @@
 // packed into the IO ring.
 //
 
- //`define NO_EXT_FIFO
+`define NO_EXT_FIFO
 
 module ext_fifo
   #(parameter INT_WIDTH=36,EXT_WIDTH=18,RAM_DEPTH=19,FIFO_DEPTH=19)

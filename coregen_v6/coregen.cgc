@@ -1,0 +1,1806 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:design xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1.4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xilinx="http://www.xilinx.com" >
+   <spirit:vendor>xilinx.com</spirit:vendor>
+   <spirit:library>project</spirit:library>
+   <spirit:name>coregen</spirit:name>
+   <spirit:version>1.0</spirit:version>
+   <spirit:componentInstances>
+      <spirit:componentInstance>
+         <spirit:instanceName>fifo_xlnx_16x19_2clk</spirit:instanceName>
+         <spirit:displayName></spirit:displayName>
+         <spirit:description></spirit:description>
+         <spirit:componentRef spirit:vendor="xilinx.com" spirit:library="ip" spirit:name="fifo_generator" spirit:version="6.1" />
+         <spirit:configurableElementValues>
+            <spirit:configurableElementValue spirit:referenceId="parameter_almost_empty_flag">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_write_data_count">true</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_full_threshold_negate_value">14</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_empty_threshold_negate_value">5</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_output_data_width">19</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_input_depth">16</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_valid_flag">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_programmable_empty_type">No_Programmable_Empty_Threshold</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_write_acknowledge_flag">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_enable_int_clk">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_fifo_implementation">Independent_Clocks_Distributed_RAM</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_underflow_flag">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_use_extra_logic">true</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_full_flags_reset_value">1</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_valid_sense">Active_High</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_write_data_count_width">5</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_data_count_width">4</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_output_depth">16</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_dout_reset_value">0</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_reset_pin">true</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_underflow_sense">Active_High</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_overflow_sense">Active_High</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_overflow_flag">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_read_data_count">true</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_data_count">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_programmable_full_type">No_Programmable_Full_Threshold</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_read_data_count_width">5</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_reset_type">Asynchronous_Reset</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_performance_options">First_Word_Fall_Through</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_full_threshold_assert_value">15</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_use_dout_reset">true</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_almost_full_flag">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_use_embedded_registers">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_read_clock_frequency">1</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_write_acknowledge_sense">Active_High</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_disable_timing_violations">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_empty_threshold_assert_value">4</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_input_data_width">19</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_write_clock_frequency">1</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_enable_ecc">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_inject_dbit_error">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_enable_reset_synchronization">true</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_inject_sbit_error">false</spirit:configurableElementValue>
+         </spirit:configurableElementValues>
+         <spirit:vendorExtensions>
+            <xilinx:instanceProperties xmlns:xilinx="http://www.xilinx.com">
+             <xilinx:projectOptions>
+               <xilinx:projectName>coregen</xilinx:projectName>
+               <xilinx:outputDirectory>./</xilinx:outputDirectory>
+               <xilinx:workingDirectory>./tmp/</xilinx:workingDirectory>
+               <xilinx:subWorkingDirectory>./tmp/_cg</xilinx:subWorkingDirectory>
+             </xilinx:projectOptions>
+             <xilinx:part>
+               <xilinx:device>xc6vlx240t</xilinx:device>
+               <xilinx:deviceFamily>virtex6</xilinx:deviceFamily>
+               <xilinx:package>ff1156</xilinx:package>
+               <xilinx:speedGrade>-1</xilinx:speedGrade>
+             </xilinx:part>
+             <xilinx:flowOptions>
+               <xilinx:busFormat>BusFormatAngleBracketNotRipped</xilinx:busFormat>
+               <xilinx:designEntry>Verilog</xilinx:designEntry>
+               <xilinx:asySymbol>true</xilinx:asySymbol>
+               <xilinx:flowVendor>Foundation_ISE</xilinx:flowVendor>
+               <xilinx:addPads>false</xilinx:addPads>
+               <xilinx:removeRPMs>false</xilinx:removeRPMs>
+               <xilinx:createNDF>false</xilinx:createNDF>
+               <xilinx:implementationFileType>Ngc</xilinx:implementationFileType>
+               <xilinx:formalVerification>false</xilinx:formalVerification>
+             </xilinx:flowOptions>
+             <xilinx:simulationOptions>
+               <xilinx:simulationModel>Behavioral</xilinx:simulationModel>
+               <xilinx:simulationLanguage>Verilog</xilinx:simulationLanguage>
+               <xilinx:foundationSym>false</xilinx:foundationSym>
+             </xilinx:simulationOptions>
+           </xilinx:instanceProperties>
+            <xilinx:generationHistory>
+               <xilinx:fileSet>
+                  <xilinx:name>apply_current_project_options_generator</xilinx:name>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>implementation_netlist_generator</xilinx:name>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_generator_ug175.pdf</xilinx:name>
+                     <xilinx:userFileType>pdf</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:15:48 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x6BFB733E</xilinx:checkSum>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_16x19_2clk.asy</xilinx:name>
+                     <xilinx:userFileType>asy</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:14:19 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0xCF883C52</xilinx:checkSum>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_16x19_2clk.ngc</xilinx:name>
+                     <xilinx:userFileType>ngc</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:16:01 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0xC002588D</xilinx:checkSum>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_16x19_2clk.sym</xilinx:name>
+                     <xilinx:userFileType>asy</xilinx:userFileType>
+                     <xilinx:userFileType>unknown</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:15:49 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x2B13E8C2</xilinx:checkSum>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_16x19_2clk.v</xilinx:name>
+                     <xilinx:userFileType>verilog</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:15:49 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x9E9166CC</xilinx:checkSum>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_16x19_2clk.veo</xilinx:name>
+                     <xilinx:userFileType>veo</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:15:49 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x90EF0999</xilinx:checkSum>
+                  </xilinx:file>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>instantiation_template_generator</xilinx:name>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>xco_generator</xilinx:name>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_16x19_2clk.xco</xilinx:name>
+                     <xilinx:userFileType>xco</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:16:07 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0xE81558ED</xilinx:checkSum>
+                  </xilinx:file>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>xmdf_generator</xilinx:name>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_16x19_2clk_xmdf.tcl</xilinx:name>
+                     <xilinx:userFileType>tclXmdf</xilinx:userFileType>
+                     <xilinx:userFileType>tcl</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:16:07 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0xE7963C36</xilinx:checkSum>
+                  </xilinx:file>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>ise_generator</xilinx:name>
+                  <xilinx:file>
+                     <xilinx:name>./_xmsgs/pn_parser.xmsgs</xilinx:name>
+                     <xilinx:userFileType>ignore</xilinx:userFileType>
+                     <xilinx:userFileType>unknown</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:16:12 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x89EA0C4E</xilinx:checkSum>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_16x19_2clk.gise</xilinx:name>
+                     <xilinx:userFileType>ignore</xilinx:userFileType>
+                     <xilinx:userFileType>gise</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:16:12 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x71E0A7E9</xilinx:checkSum>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_16x19_2clk.xise</xilinx:name>
+                     <xilinx:userFileType>ignore</xilinx:userFileType>
+                     <xilinx:userFileType>xise</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:16:12 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x41FEC8A9</xilinx:checkSum>
+                  </xilinx:file>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>deliver_readme_generator</xilinx:name>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_16x19_2clk_readme.txt</xilinx:name>
+                     <xilinx:userFileType>ignore</xilinx:userFileType>
+                     <xilinx:userFileType>txtReadme</xilinx:userFileType>
+                     <xilinx:userFileType>txt</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:16:12 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x8BF398C7</xilinx:checkSum>
+                  </xilinx:file>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>flist_generator</xilinx:name>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_16x19_2clk_flist.txt</xilinx:name>
+                     <xilinx:userFileType>ignore</xilinx:userFileType>
+                     <xilinx:userFileType>txtFlist</xilinx:userFileType>
+                     <xilinx:userFileType>txt</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:16:13 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0xB5B42CD8</xilinx:checkSum>
+                  </xilinx:file>
+               </xilinx:fileSet>
+            </xilinx:generationHistory>
+         </spirit:vendorExtensions>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+         <spirit:instanceName>fifo_xlnx_16x40_2clk</spirit:instanceName>
+         <spirit:displayName></spirit:displayName>
+         <spirit:description></spirit:description>
+         <spirit:componentRef spirit:vendor="xilinx.com" spirit:library="ip" spirit:name="fifo_generator" spirit:version="6.1" />
+         <spirit:configurableElementValues>
+            <spirit:configurableElementValue spirit:referenceId="parameter_almost_empty_flag">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_write_data_count">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_full_threshold_negate_value">14</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_empty_threshold_negate_value">5</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_output_data_width">40</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_input_depth">16</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_valid_flag">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_programmable_empty_type">No_Programmable_Empty_Threshold</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_write_acknowledge_flag">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_enable_int_clk">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_fifo_implementation">Independent_Clocks_Distributed_RAM</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_underflow_flag">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_use_extra_logic">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_full_flags_reset_value">1</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_valid_sense">Active_High</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_write_data_count_width">4</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_data_count_width">4</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_output_depth">16</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_dout_reset_value">0</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_reset_pin">true</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_underflow_sense">Active_High</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_overflow_sense">Active_High</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_overflow_flag">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_read_data_count">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_data_count">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_programmable_full_type">No_Programmable_Full_Threshold</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_read_data_count_width">4</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_reset_type">Asynchronous_Reset</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_performance_options">First_Word_Fall_Through</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_full_threshold_assert_value">15</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_use_dout_reset">true</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_almost_full_flag">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_use_embedded_registers">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_read_clock_frequency">1</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_write_acknowledge_sense">Active_High</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_disable_timing_violations">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_empty_threshold_assert_value">4</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_input_data_width">40</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_write_clock_frequency">1</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_enable_ecc">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_inject_dbit_error">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_enable_reset_synchronization">true</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_inject_sbit_error">false</spirit:configurableElementValue>
+         </spirit:configurableElementValues>
+         <spirit:vendorExtensions>
+            <xilinx:instanceProperties xmlns:xilinx="http://www.xilinx.com">
+             <xilinx:projectOptions>
+               <xilinx:projectName>coregen</xilinx:projectName>
+               <xilinx:outputDirectory>./</xilinx:outputDirectory>
+               <xilinx:workingDirectory>./tmp/</xilinx:workingDirectory>
+               <xilinx:subWorkingDirectory>./tmp/_cg</xilinx:subWorkingDirectory>
+             </xilinx:projectOptions>
+             <xilinx:part>
+               <xilinx:device>xc6vlx240t</xilinx:device>
+               <xilinx:deviceFamily>virtex6</xilinx:deviceFamily>
+               <xilinx:package>ff1156</xilinx:package>
+               <xilinx:speedGrade>-1</xilinx:speedGrade>
+             </xilinx:part>
+             <xilinx:flowOptions>
+               <xilinx:busFormat>BusFormatAngleBracketNotRipped</xilinx:busFormat>
+               <xilinx:designEntry>Verilog</xilinx:designEntry>
+               <xilinx:asySymbol>true</xilinx:asySymbol>
+               <xilinx:flowVendor>Foundation_ISE</xilinx:flowVendor>
+               <xilinx:addPads>false</xilinx:addPads>
+               <xilinx:removeRPMs>false</xilinx:removeRPMs>
+               <xilinx:createNDF>false</xilinx:createNDF>
+               <xilinx:implementationFileType>Ngc</xilinx:implementationFileType>
+               <xilinx:formalVerification>false</xilinx:formalVerification>
+             </xilinx:flowOptions>
+             <xilinx:simulationOptions>
+               <xilinx:simulationModel>Behavioral</xilinx:simulationModel>
+               <xilinx:simulationLanguage>Verilog</xilinx:simulationLanguage>
+               <xilinx:foundationSym>false</xilinx:foundationSym>
+             </xilinx:simulationOptions>
+           </xilinx:instanceProperties>
+            <xilinx:generationHistory>
+               <xilinx:fileSet>
+                  <xilinx:name>apply_current_project_options_generator</xilinx:name>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>implementation_netlist_generator</xilinx:name>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_generator_ug175.pdf</xilinx:name>
+                     <xilinx:userFileType>pdf</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:17:42 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x6BFB733E</xilinx:checkSum>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_16x40_2clk.asy</xilinx:name>
+                     <xilinx:userFileType>asy</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:16:13 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0xD1BA1914</xilinx:checkSum>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_16x40_2clk.ngc</xilinx:name>
+                     <xilinx:userFileType>ngc</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:17:55 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x506A5B4F</xilinx:checkSum>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_16x40_2clk.sym</xilinx:name>
+                     <xilinx:userFileType>asy</xilinx:userFileType>
+                     <xilinx:userFileType>unknown</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:17:42 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x14AAC076</xilinx:checkSum>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_16x40_2clk.v</xilinx:name>
+                     <xilinx:userFileType>verilog</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:17:42 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x8B1B856B</xilinx:checkSum>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_16x40_2clk.veo</xilinx:name>
+                     <xilinx:userFileType>veo</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:17:42 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0xFDF41B99</xilinx:checkSum>
+                  </xilinx:file>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>instantiation_template_generator</xilinx:name>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>xco_generator</xilinx:name>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_16x40_2clk.xco</xilinx:name>
+                     <xilinx:userFileType>xco</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:18:02 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x93864B37</xilinx:checkSum>
+                  </xilinx:file>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>xmdf_generator</xilinx:name>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_16x40_2clk_xmdf.tcl</xilinx:name>
+                     <xilinx:userFileType>tclXmdf</xilinx:userFileType>
+                     <xilinx:userFileType>tcl</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:18:02 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x61425BF4</xilinx:checkSum>
+                  </xilinx:file>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>ise_generator</xilinx:name>
+                  <xilinx:file>
+                     <xilinx:name>./_xmsgs/pn_parser.xmsgs</xilinx:name>
+                     <xilinx:userFileType>ignore</xilinx:userFileType>
+                     <xilinx:userFileType>unknown</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:18:05 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x46763B94</xilinx:checkSum>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_16x40_2clk.gise</xilinx:name>
+                     <xilinx:userFileType>ignore</xilinx:userFileType>
+                     <xilinx:userFileType>gise</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:18:06 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x9309C40B</xilinx:checkSum>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_16x40_2clk.xise</xilinx:name>
+                     <xilinx:userFileType>ignore</xilinx:userFileType>
+                     <xilinx:userFileType>xise</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:18:06 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x690AE9A2</xilinx:checkSum>
+                  </xilinx:file>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>deliver_readme_generator</xilinx:name>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_16x40_2clk_readme.txt</xilinx:name>
+                     <xilinx:userFileType>ignore</xilinx:userFileType>
+                     <xilinx:userFileType>txtReadme</xilinx:userFileType>
+                     <xilinx:userFileType>txt</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:18:06 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x641D84A9</xilinx:checkSum>
+                  </xilinx:file>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>flist_generator</xilinx:name>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_16x40_2clk_flist.txt</xilinx:name>
+                     <xilinx:userFileType>ignore</xilinx:userFileType>
+                     <xilinx:userFileType>txtFlist</xilinx:userFileType>
+                     <xilinx:userFileType>txt</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:18:06 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x5EA26FBE</xilinx:checkSum>
+                  </xilinx:file>
+               </xilinx:fileSet>
+            </xilinx:generationHistory>
+         </spirit:vendorExtensions>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+         <spirit:instanceName>fifo_xlnx_2Kx36_2clk</spirit:instanceName>
+         <spirit:displayName></spirit:displayName>
+         <spirit:description></spirit:description>
+         <spirit:componentRef spirit:vendor="xilinx.com" spirit:library="ip" spirit:name="fifo_generator" spirit:version="6.1" />
+         <spirit:configurableElementValues>
+            <spirit:configurableElementValue spirit:referenceId="parameter_almost_empty_flag">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_write_data_count">true</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_full_threshold_negate_value">2046</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_empty_threshold_negate_value">5</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_output_data_width">36</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_input_depth">2048</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_valid_flag">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_programmable_empty_type">No_Programmable_Empty_Threshold</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_write_acknowledge_flag">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_enable_int_clk">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_fifo_implementation">Independent_Clocks_Block_RAM</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_underflow_flag">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_use_extra_logic">true</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_full_flags_reset_value">1</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_valid_sense">Active_High</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_write_data_count_width">12</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_data_count_width">11</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_output_depth">2048</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_dout_reset_value">0</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_reset_pin">true</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_underflow_sense">Active_High</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_overflow_sense">Active_High</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_overflow_flag">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_read_data_count">true</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_data_count">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_programmable_full_type">No_Programmable_Full_Threshold</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_read_data_count_width">12</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_reset_type">Asynchronous_Reset</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_performance_options">First_Word_Fall_Through</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_full_threshold_assert_value">2047</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_use_dout_reset">true</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_almost_full_flag">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_use_embedded_registers">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_read_clock_frequency">1</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_write_acknowledge_sense">Active_High</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_disable_timing_violations">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_empty_threshold_assert_value">4</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_input_data_width">36</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_write_clock_frequency">1</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_enable_ecc">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_inject_dbit_error">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_enable_reset_synchronization">true</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_inject_sbit_error">false</spirit:configurableElementValue>
+         </spirit:configurableElementValues>
+         <spirit:vendorExtensions>
+            <xilinx:instanceProperties xmlns:xilinx="http://www.xilinx.com">
+             <xilinx:projectOptions>
+               <xilinx:projectName>coregen</xilinx:projectName>
+               <xilinx:outputDirectory>./</xilinx:outputDirectory>
+               <xilinx:workingDirectory>./tmp/</xilinx:workingDirectory>
+               <xilinx:subWorkingDirectory>./tmp/_cg</xilinx:subWorkingDirectory>
+             </xilinx:projectOptions>
+             <xilinx:part>
+               <xilinx:device>xc6vlx240t</xilinx:device>
+               <xilinx:deviceFamily>virtex6</xilinx:deviceFamily>
+               <xilinx:package>ff1156</xilinx:package>
+               <xilinx:speedGrade>-1</xilinx:speedGrade>
+             </xilinx:part>
+             <xilinx:flowOptions>
+               <xilinx:busFormat>BusFormatAngleBracketNotRipped</xilinx:busFormat>
+               <xilinx:designEntry>Verilog</xilinx:designEntry>
+               <xilinx:asySymbol>true</xilinx:asySymbol>
+               <xilinx:flowVendor>Foundation_ISE</xilinx:flowVendor>
+               <xilinx:addPads>false</xilinx:addPads>
+               <xilinx:removeRPMs>false</xilinx:removeRPMs>
+               <xilinx:createNDF>false</xilinx:createNDF>
+               <xilinx:implementationFileType>Ngc</xilinx:implementationFileType>
+               <xilinx:formalVerification>false</xilinx:formalVerification>
+             </xilinx:flowOptions>
+             <xilinx:simulationOptions>
+               <xilinx:simulationModel>Behavioral</xilinx:simulationModel>
+               <xilinx:simulationLanguage>Verilog</xilinx:simulationLanguage>
+               <xilinx:foundationSym>false</xilinx:foundationSym>
+             </xilinx:simulationOptions>
+           </xilinx:instanceProperties>
+            <xilinx:generationHistory>
+               <xilinx:fileSet>
+                  <xilinx:name>apply_current_project_options_generator</xilinx:name>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>implementation_netlist_generator</xilinx:name>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_generator_ug175.pdf</xilinx:name>
+                     <xilinx:userFileType>pdf</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:19:38 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x6BFB733E</xilinx:checkSum>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_2Kx36_2clk.asy</xilinx:name>
+                     <xilinx:userFileType>asy</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:18:07 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x989F65DD</xilinx:checkSum>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_2Kx36_2clk.ngc</xilinx:name>
+                     <xilinx:userFileType>ngc</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:19:49 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x5F29D015</xilinx:checkSum>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_2Kx36_2clk.sym</xilinx:name>
+                     <xilinx:userFileType>asy</xilinx:userFileType>
+                     <xilinx:userFileType>unknown</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:19:38 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x9B5062CE</xilinx:checkSum>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_2Kx36_2clk.v</xilinx:name>
+                     <xilinx:userFileType>verilog</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:19:38 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x5D5774BF</xilinx:checkSum>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_2Kx36_2clk.veo</xilinx:name>
+                     <xilinx:userFileType>veo</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:19:38 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x6C3B427F</xilinx:checkSum>
+                  </xilinx:file>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>instantiation_template_generator</xilinx:name>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>xco_generator</xilinx:name>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_2Kx36_2clk.xco</xilinx:name>
+                     <xilinx:userFileType>xco</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:19:55 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0xCD3ABB38</xilinx:checkSum>
+                  </xilinx:file>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>xmdf_generator</xilinx:name>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_2Kx36_2clk_xmdf.tcl</xilinx:name>
+                     <xilinx:userFileType>tclXmdf</xilinx:userFileType>
+                     <xilinx:userFileType>tcl</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:19:55 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0xC708A1B5</xilinx:checkSum>
+                  </xilinx:file>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>ise_generator</xilinx:name>
+                  <xilinx:file>
+                     <xilinx:name>./_xmsgs/pn_parser.xmsgs</xilinx:name>
+                     <xilinx:userFileType>ignore</xilinx:userFileType>
+                     <xilinx:userFileType>unknown</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:19:59 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x35820DCB</xilinx:checkSum>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_2Kx36_2clk.gise</xilinx:name>
+                     <xilinx:userFileType>ignore</xilinx:userFileType>
+                     <xilinx:userFileType>gise</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:19:59 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x389675FB</xilinx:checkSum>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_2Kx36_2clk.xise</xilinx:name>
+                     <xilinx:userFileType>ignore</xilinx:userFileType>
+                     <xilinx:userFileType>xise</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:19:59 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x6EF7D3BE</xilinx:checkSum>
+                  </xilinx:file>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>deliver_readme_generator</xilinx:name>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_2Kx36_2clk_readme.txt</xilinx:name>
+                     <xilinx:userFileType>ignore</xilinx:userFileType>
+                     <xilinx:userFileType>txtReadme</xilinx:userFileType>
+                     <xilinx:userFileType>txt</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:20:00 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x0022E9DF</xilinx:checkSum>
+                  </xilinx:file>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>flist_generator</xilinx:name>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_2Kx36_2clk_flist.txt</xilinx:name>
+                     <xilinx:userFileType>ignore</xilinx:userFileType>
+                     <xilinx:userFileType>txtFlist</xilinx:userFileType>
+                     <xilinx:userFileType>txt</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:20:00 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x61D57182</xilinx:checkSum>
+                  </xilinx:file>
+               </xilinx:fileSet>
+            </xilinx:generationHistory>
+         </spirit:vendorExtensions>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+         <spirit:instanceName>fifo_xlnx_32x36_2clk</spirit:instanceName>
+         <spirit:displayName></spirit:displayName>
+         <spirit:description></spirit:description>
+         <spirit:componentRef spirit:vendor="xilinx.com" spirit:library="ip" spirit:name="fifo_generator" spirit:version="6.1" />
+         <spirit:configurableElementValues>
+            <spirit:configurableElementValue spirit:referenceId="parameter_almost_empty_flag">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_write_data_count">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_full_threshold_negate_value">23</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_empty_threshold_negate_value">5</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_output_data_width">36</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_input_depth">32</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_valid_flag">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_programmable_empty_type">No_Programmable_Empty_Threshold</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_write_acknowledge_flag">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_enable_int_clk">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_fifo_implementation">Independent_Clocks_Distributed_RAM</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_underflow_flag">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_use_extra_logic">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_full_flags_reset_value">1</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_valid_sense">Active_High</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_write_data_count_width">5</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_inject_dbit_error">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_data_count_width">5</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_output_depth">32</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_dout_reset_value">0</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_enable_reset_synchronization">true</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_reset_pin">true</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_underflow_sense">Active_High</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_overflow_sense">Active_High</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_overflow_flag">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_read_data_count">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_data_count">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_programmable_full_type">Single_Programmable_Full_Threshold_Constant</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_inject_sbit_error">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_read_data_count_width">5</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_reset_type">Asynchronous_Reset</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_performance_options">First_Word_Fall_Through</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_full_threshold_assert_value">24</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_use_dout_reset">true</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_almost_full_flag">true</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_use_embedded_registers">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_read_clock_frequency">1</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_write_acknowledge_sense">Active_High</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_disable_timing_violations">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_empty_threshold_assert_value">4</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_input_data_width">36</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_write_clock_frequency">1</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_enable_ecc">false</spirit:configurableElementValue>
+         </spirit:configurableElementValues>
+         <spirit:vendorExtensions>
+            <xilinx:instanceProperties xmlns:xilinx="http://www.xilinx.com">
+             <xilinx:projectOptions>
+               <xilinx:projectName>coregen</xilinx:projectName>
+               <xilinx:outputDirectory>./</xilinx:outputDirectory>
+               <xilinx:workingDirectory>./tmp/</xilinx:workingDirectory>
+               <xilinx:subWorkingDirectory>./tmp/_cg</xilinx:subWorkingDirectory>
+             </xilinx:projectOptions>
+             <xilinx:part>
+               <xilinx:device>xc6vlx240t</xilinx:device>
+               <xilinx:deviceFamily>virtex6</xilinx:deviceFamily>
+               <xilinx:package>ff1156</xilinx:package>
+               <xilinx:speedGrade>-1</xilinx:speedGrade>
+             </xilinx:part>
+             <xilinx:flowOptions>
+               <xilinx:busFormat>BusFormatAngleBracketNotRipped</xilinx:busFormat>
+               <xilinx:designEntry>Verilog</xilinx:designEntry>
+               <xilinx:asySymbol>true</xilinx:asySymbol>
+               <xilinx:flowVendor>Foundation_ISE</xilinx:flowVendor>
+               <xilinx:addPads>false</xilinx:addPads>
+               <xilinx:removeRPMs>false</xilinx:removeRPMs>
+               <xilinx:createNDF>false</xilinx:createNDF>
+               <xilinx:implementationFileType>Ngc</xilinx:implementationFileType>
+               <xilinx:formalVerification>false</xilinx:formalVerification>
+             </xilinx:flowOptions>
+             <xilinx:simulationOptions>
+               <xilinx:simulationModel>Behavioral</xilinx:simulationModel>
+               <xilinx:simulationLanguage>Verilog</xilinx:simulationLanguage>
+               <xilinx:foundationSym>false</xilinx:foundationSym>
+             </xilinx:simulationOptions>
+           </xilinx:instanceProperties>
+            <xilinx:generationHistory>
+               <xilinx:fileSet>
+                  <xilinx:name>apply_current_project_options_generator</xilinx:name>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>implementation_netlist_generator</xilinx:name>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_generator_ug175.pdf</xilinx:name>
+                     <xilinx:userFileType>pdf</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:21:30 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x6BFB733E</xilinx:checkSum>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_32x36_2clk.asy</xilinx:name>
+                     <xilinx:userFileType>asy</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:20:01 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0xA8D7D856</xilinx:checkSum>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_32x36_2clk.ngc</xilinx:name>
+                     <xilinx:userFileType>ngc</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:21:43 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x9A356F83</xilinx:checkSum>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_32x36_2clk.sym</xilinx:name>
+                     <xilinx:userFileType>asy</xilinx:userFileType>
+                     <xilinx:userFileType>unknown</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:21:30 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x31936057</xilinx:checkSum>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_32x36_2clk.v</xilinx:name>
+                     <xilinx:userFileType>verilog</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:21:30 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x5C28BDFB</xilinx:checkSum>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_32x36_2clk.veo</xilinx:name>
+                     <xilinx:userFileType>veo</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:21:30 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x02DB47AD</xilinx:checkSum>
+                  </xilinx:file>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>instantiation_template_generator</xilinx:name>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>xco_generator</xilinx:name>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_32x36_2clk.xco</xilinx:name>
+                     <xilinx:userFileType>xco</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:21:49 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0xBEABEE5B</xilinx:checkSum>
+                  </xilinx:file>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>xmdf_generator</xilinx:name>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_32x36_2clk_xmdf.tcl</xilinx:name>
+                     <xilinx:userFileType>tclXmdf</xilinx:userFileType>
+                     <xilinx:userFileType>tcl</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:21:49 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0xFDF1D2B6</xilinx:checkSum>
+                  </xilinx:file>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>ise_generator</xilinx:name>
+                  <xilinx:file>
+                     <xilinx:name>./_xmsgs/pn_parser.xmsgs</xilinx:name>
+                     <xilinx:userFileType>ignore</xilinx:userFileType>
+                     <xilinx:userFileType>unknown</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:21:53 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0xD14C7F06</xilinx:checkSum>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_32x36_2clk.gise</xilinx:name>
+                     <xilinx:userFileType>ignore</xilinx:userFileType>
+                     <xilinx:userFileType>gise</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:21:53 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x29E34604</xilinx:checkSum>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_32x36_2clk.xise</xilinx:name>
+                     <xilinx:userFileType>ignore</xilinx:userFileType>
+                     <xilinx:userFileType>xise</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:21:53 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x28A31840</xilinx:checkSum>
+                  </xilinx:file>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>deliver_readme_generator</xilinx:name>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_32x36_2clk_readme.txt</xilinx:name>
+                     <xilinx:userFileType>ignore</xilinx:userFileType>
+                     <xilinx:userFileType>txtReadme</xilinx:userFileType>
+                     <xilinx:userFileType>txt</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:21:54 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x7E726F50</xilinx:checkSum>
+                  </xilinx:file>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>flist_generator</xilinx:name>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_32x36_2clk_flist.txt</xilinx:name>
+                     <xilinx:userFileType>ignore</xilinx:userFileType>
+                     <xilinx:userFileType>txtFlist</xilinx:userFileType>
+                     <xilinx:userFileType>txt</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:21:54 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x1BCFB6C0</xilinx:checkSum>
+                  </xilinx:file>
+               </xilinx:fileSet>
+            </xilinx:generationHistory>
+         </spirit:vendorExtensions>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+         <spirit:instanceName>fifo_xlnx_512x36_2clk</spirit:instanceName>
+         <spirit:displayName></spirit:displayName>
+         <spirit:description></spirit:description>
+         <spirit:componentRef spirit:vendor="xilinx.com" spirit:library="ip" spirit:name="fifo_generator" spirit:version="6.1" />
+         <spirit:configurableElementValues>
+            <spirit:configurableElementValue spirit:referenceId="parameter_almost_empty_flag">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_write_data_count">true</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_full_threshold_negate_value">510</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_empty_threshold_negate_value">5</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_output_data_width">36</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_input_depth">512</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_valid_flag">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_programmable_empty_type">No_Programmable_Empty_Threshold</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_write_acknowledge_flag">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_enable_int_clk">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_fifo_implementation">Independent_Clocks_Block_RAM</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_underflow_flag">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_use_extra_logic">true</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_full_flags_reset_value">1</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_valid_sense">Active_High</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_write_data_count_width">10</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_data_count_width">9</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_output_depth">512</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_dout_reset_value">0</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_reset_pin">true</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_underflow_sense">Active_High</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_overflow_sense">Active_High</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_overflow_flag">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_read_data_count">true</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_data_count">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_programmable_full_type">No_Programmable_Full_Threshold</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_read_data_count_width">10</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_reset_type">Asynchronous_Reset</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_performance_options">First_Word_Fall_Through</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_full_threshold_assert_value">511</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_use_dout_reset">true</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_almost_full_flag">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_use_embedded_registers">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_read_clock_frequency">1</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_write_acknowledge_sense">Active_High</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_disable_timing_violations">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_empty_threshold_assert_value">4</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_input_data_width">36</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_write_clock_frequency">1</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_enable_ecc">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_inject_dbit_error">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_enable_reset_synchronization">true</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_inject_sbit_error">false</spirit:configurableElementValue>
+         </spirit:configurableElementValues>
+         <spirit:vendorExtensions>
+            <xilinx:instanceProperties xmlns:xilinx="http://www.xilinx.com">
+             <xilinx:projectOptions>
+               <xilinx:projectName>coregen</xilinx:projectName>
+               <xilinx:outputDirectory>./</xilinx:outputDirectory>
+               <xilinx:workingDirectory>./tmp/</xilinx:workingDirectory>
+               <xilinx:subWorkingDirectory>./tmp/_cg</xilinx:subWorkingDirectory>
+             </xilinx:projectOptions>
+             <xilinx:part>
+               <xilinx:device>xc6vlx240t</xilinx:device>
+               <xilinx:deviceFamily>virtex6</xilinx:deviceFamily>
+               <xilinx:package>ff1156</xilinx:package>
+               <xilinx:speedGrade>-1</xilinx:speedGrade>
+             </xilinx:part>
+             <xilinx:flowOptions>
+               <xilinx:busFormat>BusFormatAngleBracketNotRipped</xilinx:busFormat>
+               <xilinx:designEntry>Verilog</xilinx:designEntry>
+               <xilinx:asySymbol>true</xilinx:asySymbol>
+               <xilinx:flowVendor>Foundation_ISE</xilinx:flowVendor>
+               <xilinx:addPads>false</xilinx:addPads>
+               <xilinx:removeRPMs>false</xilinx:removeRPMs>
+               <xilinx:createNDF>false</xilinx:createNDF>
+               <xilinx:implementationFileType>Ngc</xilinx:implementationFileType>
+               <xilinx:formalVerification>false</xilinx:formalVerification>
+             </xilinx:flowOptions>
+             <xilinx:simulationOptions>
+               <xilinx:simulationModel>Behavioral</xilinx:simulationModel>
+               <xilinx:simulationLanguage>Verilog</xilinx:simulationLanguage>
+               <xilinx:foundationSym>false</xilinx:foundationSym>
+             </xilinx:simulationOptions>
+           </xilinx:instanceProperties>
+            <xilinx:generationHistory>
+               <xilinx:fileSet>
+                  <xilinx:name>apply_current_project_options_generator</xilinx:name>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>implementation_netlist_generator</xilinx:name>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_generator_ug175.pdf</xilinx:name>
+                     <xilinx:userFileType>pdf</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:23:26 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x6BFB733E</xilinx:checkSum>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_512x36_2clk.asy</xilinx:name>
+                     <xilinx:userFileType>asy</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:21:55 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0xD5042584</xilinx:checkSum>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_512x36_2clk.ngc</xilinx:name>
+                     <xilinx:userFileType>ngc</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:23:37 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x70FB6F68</xilinx:checkSum>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_512x36_2clk.sym</xilinx:name>
+                     <xilinx:userFileType>asy</xilinx:userFileType>
+                     <xilinx:userFileType>unknown</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:23:26 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x7A9C345B</xilinx:checkSum>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_512x36_2clk.v</xilinx:name>
+                     <xilinx:userFileType>verilog</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:23:26 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x43D59692</xilinx:checkSum>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_512x36_2clk.veo</xilinx:name>
+                     <xilinx:userFileType>veo</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:23:26 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x17F79172</xilinx:checkSum>
+                  </xilinx:file>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>instantiation_template_generator</xilinx:name>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>xco_generator</xilinx:name>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_512x36_2clk.xco</xilinx:name>
+                     <xilinx:userFileType>xco</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:23:44 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0xA82202DB</xilinx:checkSum>
+                  </xilinx:file>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>xmdf_generator</xilinx:name>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_512x36_2clk_xmdf.tcl</xilinx:name>
+                     <xilinx:userFileType>tclXmdf</xilinx:userFileType>
+                     <xilinx:userFileType>tcl</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:23:44 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x2905530B</xilinx:checkSum>
+                  </xilinx:file>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>ise_generator</xilinx:name>
+                  <xilinx:file>
+                     <xilinx:name>./_xmsgs/pn_parser.xmsgs</xilinx:name>
+                     <xilinx:userFileType>ignore</xilinx:userFileType>
+                     <xilinx:userFileType>unknown</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:23:48 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0xA718550B</xilinx:checkSum>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_512x36_2clk.gise</xilinx:name>
+                     <xilinx:userFileType>ignore</xilinx:userFileType>
+                     <xilinx:userFileType>gise</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:23:48 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x06BF4380</xilinx:checkSum>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_512x36_2clk.xise</xilinx:name>
+                     <xilinx:userFileType>ignore</xilinx:userFileType>
+                     <xilinx:userFileType>xise</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:23:48 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0xB183FC62</xilinx:checkSum>
+                  </xilinx:file>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>deliver_readme_generator</xilinx:name>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_512x36_2clk_readme.txt</xilinx:name>
+                     <xilinx:userFileType>ignore</xilinx:userFileType>
+                     <xilinx:userFileType>txtReadme</xilinx:userFileType>
+                     <xilinx:userFileType>txt</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:23:49 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x5E452F61</xilinx:checkSum>
+                  </xilinx:file>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>flist_generator</xilinx:name>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_512x36_2clk_flist.txt</xilinx:name>
+                     <xilinx:userFileType>ignore</xilinx:userFileType>
+                     <xilinx:userFileType>txtFlist</xilinx:userFileType>
+                     <xilinx:userFileType>txt</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:23:49 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0xC85CA4C7</xilinx:checkSum>
+                  </xilinx:file>
+               </xilinx:fileSet>
+            </xilinx:generationHistory>
+         </spirit:vendorExtensions>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+         <spirit:instanceName>fifo_xlnx_512x36_2clk_18to36</spirit:instanceName>
+         <spirit:displayName></spirit:displayName>
+         <spirit:description></spirit:description>
+         <spirit:componentRef spirit:vendor="xilinx.com" spirit:library="ip" spirit:name="fifo_generator" spirit:version="6.1" />
+         <spirit:configurableElementValues>
+            <spirit:configurableElementValue spirit:referenceId="parameter_almost_empty_flag">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_write_data_count">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_full_threshold_negate_value">1014</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_empty_threshold_negate_value">5</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_output_data_width">36</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_input_depth">1024</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_valid_flag">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_programmable_empty_type">No_Programmable_Empty_Threshold</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_write_acknowledge_flag">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_enable_int_clk">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_fifo_implementation">Independent_Clocks_Block_RAM</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_underflow_flag">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_use_extra_logic">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_full_flags_reset_value">0</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_valid_sense">Active_High</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_write_data_count_width">10</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_inject_dbit_error">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_data_count_width">10</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_output_depth">512</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_dout_reset_value">0</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_enable_reset_synchronization">true</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_reset_pin">true</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_underflow_sense">Active_High</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_overflow_sense">Active_High</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_overflow_flag">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_read_data_count">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_data_count">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_programmable_full_type">Single_Programmable_Full_Threshold_Constant</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_inject_sbit_error">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_read_data_count_width">9</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_reset_type">Asynchronous_Reset</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_performance_options">First_Word_Fall_Through</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_full_threshold_assert_value">1015</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_use_dout_reset">true</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_almost_full_flag">true</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_use_embedded_registers">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_read_clock_frequency">1</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_write_acknowledge_sense">Active_High</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_disable_timing_violations">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_empty_threshold_assert_value">4</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_input_data_width">18</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_write_clock_frequency">1</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_enable_ecc">false</spirit:configurableElementValue>
+         </spirit:configurableElementValues>
+         <spirit:vendorExtensions>
+            <xilinx:instanceProperties xmlns:xilinx="http://www.xilinx.com">
+             <xilinx:projectOptions>
+               <xilinx:projectName>coregen</xilinx:projectName>
+               <xilinx:outputDirectory>./</xilinx:outputDirectory>
+               <xilinx:workingDirectory>./tmp/</xilinx:workingDirectory>
+               <xilinx:subWorkingDirectory>./tmp/_cg</xilinx:subWorkingDirectory>
+             </xilinx:projectOptions>
+             <xilinx:part>
+               <xilinx:device>xc6vlx240t</xilinx:device>
+               <xilinx:deviceFamily>virtex6</xilinx:deviceFamily>
+               <xilinx:package>ff1156</xilinx:package>
+               <xilinx:speedGrade>-1</xilinx:speedGrade>
+             </xilinx:part>
+             <xilinx:flowOptions>
+               <xilinx:busFormat>BusFormatAngleBracketNotRipped</xilinx:busFormat>
+               <xilinx:designEntry>Verilog</xilinx:designEntry>
+               <xilinx:asySymbol>true</xilinx:asySymbol>
+               <xilinx:flowVendor>Foundation_ISE</xilinx:flowVendor>
+               <xilinx:addPads>false</xilinx:addPads>
+               <xilinx:removeRPMs>false</xilinx:removeRPMs>
+               <xilinx:createNDF>false</xilinx:createNDF>
+               <xilinx:implementationFileType>Ngc</xilinx:implementationFileType>
+               <xilinx:formalVerification>false</xilinx:formalVerification>
+             </xilinx:flowOptions>
+             <xilinx:simulationOptions>
+               <xilinx:simulationModel>Behavioral</xilinx:simulationModel>
+               <xilinx:simulationLanguage>Verilog</xilinx:simulationLanguage>
+               <xilinx:foundationSym>false</xilinx:foundationSym>
+             </xilinx:simulationOptions>
+           </xilinx:instanceProperties>
+            <xilinx:generationHistory>
+               <xilinx:fileSet>
+                  <xilinx:name>apply_current_project_options_generator</xilinx:name>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>implementation_netlist_generator</xilinx:name>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_generator_ug175.pdf</xilinx:name>
+                     <xilinx:userFileType>pdf</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:25:21 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x6BFB733E</xilinx:checkSum>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_512x36_2clk_18to36.asy</xilinx:name>
+                     <xilinx:userFileType>asy</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:23:50 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x1B9B5F58</xilinx:checkSum>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_512x36_2clk_18to36.ngc</xilinx:name>
+                     <xilinx:userFileType>ngc</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:25:32 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x29186CC0</xilinx:checkSum>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_512x36_2clk_18to36.sym</xilinx:name>
+                     <xilinx:userFileType>asy</xilinx:userFileType>
+                     <xilinx:userFileType>unknown</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:25:22 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0xE1337339</xilinx:checkSum>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_512x36_2clk_18to36.v</xilinx:name>
+                     <xilinx:userFileType>verilog</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:25:21 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0xE587636B</xilinx:checkSum>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_512x36_2clk_18to36.veo</xilinx:name>
+                     <xilinx:userFileType>veo</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:25:21 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x5584085C</xilinx:checkSum>
+                  </xilinx:file>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>instantiation_template_generator</xilinx:name>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>xco_generator</xilinx:name>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_512x36_2clk_18to36.xco</xilinx:name>
+                     <xilinx:userFileType>xco</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:25:39 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0xA968A8A8</xilinx:checkSum>
+                  </xilinx:file>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>xmdf_generator</xilinx:name>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_512x36_2clk_18to36_xmdf.tcl</xilinx:name>
+                     <xilinx:userFileType>tclXmdf</xilinx:userFileType>
+                     <xilinx:userFileType>tcl</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:25:39 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x634E982A</xilinx:checkSum>
+                  </xilinx:file>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>ise_generator</xilinx:name>
+                  <xilinx:file>
+                     <xilinx:name>./_xmsgs/pn_parser.xmsgs</xilinx:name>
+                     <xilinx:userFileType>ignore</xilinx:userFileType>
+                     <xilinx:userFileType>unknown</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:25:43 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x151098F0</xilinx:checkSum>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_512x36_2clk_18to36.gise</xilinx:name>
+                     <xilinx:userFileType>ignore</xilinx:userFileType>
+                     <xilinx:userFileType>gise</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:25:43 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x8E9A05D9</xilinx:checkSum>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_512x36_2clk_18to36.xise</xilinx:name>
+                     <xilinx:userFileType>ignore</xilinx:userFileType>
+                     <xilinx:userFileType>xise</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:25:43 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x2DBB2FCB</xilinx:checkSum>
+                  </xilinx:file>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>deliver_readme_generator</xilinx:name>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_512x36_2clk_18to36_readme.txt</xilinx:name>
+                     <xilinx:userFileType>ignore</xilinx:userFileType>
+                     <xilinx:userFileType>txtReadme</xilinx:userFileType>
+                     <xilinx:userFileType>txt</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:25:43 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x0FE40FAF</xilinx:checkSum>
+                  </xilinx:file>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>flist_generator</xilinx:name>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_512x36_2clk_18to36_flist.txt</xilinx:name>
+                     <xilinx:userFileType>ignore</xilinx:userFileType>
+                     <xilinx:userFileType>txtFlist</xilinx:userFileType>
+                     <xilinx:userFileType>txt</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:25:43 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0xAFE189CE</xilinx:checkSum>
+                  </xilinx:file>
+               </xilinx:fileSet>
+            </xilinx:generationHistory>
+         </spirit:vendorExtensions>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+         <spirit:instanceName>fifo_xlnx_512x36_2clk_36to18</spirit:instanceName>
+         <spirit:displayName></spirit:displayName>
+         <spirit:description></spirit:description>
+         <spirit:componentRef spirit:vendor="xilinx.com" spirit:library="ip" spirit:name="fifo_generator" spirit:version="6.1" />
+         <spirit:configurableElementValues>
+            <spirit:configurableElementValue spirit:referenceId="parameter_almost_empty_flag">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_write_data_count">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_full_threshold_negate_value">508</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_empty_threshold_negate_value">5</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_output_data_width">18</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_input_depth">512</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_valid_flag">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_programmable_empty_type">No_Programmable_Empty_Threshold</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_write_acknowledge_flag">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_enable_int_clk">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_fifo_implementation">Independent_Clocks_Block_RAM</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_underflow_flag">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_use_extra_logic">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_full_flags_reset_value">0</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_valid_sense">Active_High</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_write_data_count_width">9</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_inject_dbit_error">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_data_count_width">9</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_output_depth">1024</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_dout_reset_value">0</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_enable_reset_synchronization">true</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_reset_pin">true</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_underflow_sense">Active_High</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_overflow_sense">Active_High</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_overflow_flag">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_read_data_count">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_data_count">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_programmable_full_type">No_Programmable_Full_Threshold</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_inject_sbit_error">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_read_data_count_width">10</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_reset_type">Asynchronous_Reset</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_performance_options">First_Word_Fall_Through</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_full_threshold_assert_value">509</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_use_dout_reset">true</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_almost_full_flag">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_use_embedded_registers">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_read_clock_frequency">1</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_write_acknowledge_sense">Active_High</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_disable_timing_violations">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_empty_threshold_assert_value">4</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_input_data_width">36</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_write_clock_frequency">1</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_enable_ecc">false</spirit:configurableElementValue>
+         </spirit:configurableElementValues>
+         <spirit:vendorExtensions>
+            <xilinx:instanceProperties xmlns:xilinx="http://www.xilinx.com">
+             <xilinx:projectOptions>
+               <xilinx:projectName>coregen</xilinx:projectName>
+               <xilinx:outputDirectory>./</xilinx:outputDirectory>
+               <xilinx:workingDirectory>./tmp/</xilinx:workingDirectory>
+               <xilinx:subWorkingDirectory>./tmp/_cg</xilinx:subWorkingDirectory>
+             </xilinx:projectOptions>
+             <xilinx:part>
+               <xilinx:device>xc6vlx240t</xilinx:device>
+               <xilinx:deviceFamily>virtex6</xilinx:deviceFamily>
+               <xilinx:package>ff1156</xilinx:package>
+               <xilinx:speedGrade>-1</xilinx:speedGrade>
+             </xilinx:part>
+             <xilinx:flowOptions>
+               <xilinx:busFormat>BusFormatAngleBracketNotRipped</xilinx:busFormat>
+               <xilinx:designEntry>Verilog</xilinx:designEntry>
+               <xilinx:asySymbol>true</xilinx:asySymbol>
+               <xilinx:flowVendor>Foundation_ISE</xilinx:flowVendor>
+               <xilinx:addPads>false</xilinx:addPads>
+               <xilinx:removeRPMs>false</xilinx:removeRPMs>
+               <xilinx:createNDF>false</xilinx:createNDF>
+               <xilinx:implementationFileType>Ngc</xilinx:implementationFileType>
+               <xilinx:formalVerification>false</xilinx:formalVerification>
+             </xilinx:flowOptions>
+             <xilinx:simulationOptions>
+               <xilinx:simulationModel>Behavioral</xilinx:simulationModel>
+               <xilinx:simulationLanguage>Verilog</xilinx:simulationLanguage>
+               <xilinx:foundationSym>false</xilinx:foundationSym>
+             </xilinx:simulationOptions>
+           </xilinx:instanceProperties>
+            <xilinx:generationHistory>
+               <xilinx:fileSet>
+                  <xilinx:name>apply_current_project_options_generator</xilinx:name>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>implementation_netlist_generator</xilinx:name>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_generator_ug175.pdf</xilinx:name>
+                     <xilinx:userFileType>pdf</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:27:15 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x6BFB733E</xilinx:checkSum>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_512x36_2clk_36to18.asy</xilinx:name>
+                     <xilinx:userFileType>asy</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:25:44 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0xCBCF6445</xilinx:checkSum>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_512x36_2clk_36to18.ngc</xilinx:name>
+                     <xilinx:userFileType>ngc</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:27:26 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x8DDF3BCA</xilinx:checkSum>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_512x36_2clk_36to18.sym</xilinx:name>
+                     <xilinx:userFileType>asy</xilinx:userFileType>
+                     <xilinx:userFileType>unknown</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:27:15 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x62B00D12</xilinx:checkSum>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_512x36_2clk_36to18.v</xilinx:name>
+                     <xilinx:userFileType>verilog</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:27:15 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0xB20CF211</xilinx:checkSum>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_512x36_2clk_36to18.veo</xilinx:name>
+                     <xilinx:userFileType>veo</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:27:15 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0xA35201C9</xilinx:checkSum>
+                  </xilinx:file>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>instantiation_template_generator</xilinx:name>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>xco_generator</xilinx:name>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_512x36_2clk_36to18.xco</xilinx:name>
+                     <xilinx:userFileType>xco</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:27:32 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x80AA9B71</xilinx:checkSum>
+                  </xilinx:file>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>xmdf_generator</xilinx:name>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_512x36_2clk_36to18_xmdf.tcl</xilinx:name>
+                     <xilinx:userFileType>tclXmdf</xilinx:userFileType>
+                     <xilinx:userFileType>tcl</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:27:33 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0xBB22AB7F</xilinx:checkSum>
+                  </xilinx:file>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>ise_generator</xilinx:name>
+                  <xilinx:file>
+                     <xilinx:name>./_xmsgs/pn_parser.xmsgs</xilinx:name>
+                     <xilinx:userFileType>ignore</xilinx:userFileType>
+                     <xilinx:userFileType>unknown</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:27:36 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x2E26F2B6</xilinx:checkSum>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_512x36_2clk_36to18.gise</xilinx:name>
+                     <xilinx:userFileType>ignore</xilinx:userFileType>
+                     <xilinx:userFileType>gise</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:27:37 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x5CAD4F27</xilinx:checkSum>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_512x36_2clk_36to18.xise</xilinx:name>
+                     <xilinx:userFileType>ignore</xilinx:userFileType>
+                     <xilinx:userFileType>xise</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:27:37 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0xC0D70FAE</xilinx:checkSum>
+                  </xilinx:file>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>deliver_readme_generator</xilinx:name>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_512x36_2clk_36to18_readme.txt</xilinx:name>
+                     <xilinx:userFileType>ignore</xilinx:userFileType>
+                     <xilinx:userFileType>txtReadme</xilinx:userFileType>
+                     <xilinx:userFileType>txt</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:27:38 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x951BFAE9</xilinx:checkSum>
+                  </xilinx:file>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>flist_generator</xilinx:name>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_512x36_2clk_36to18_flist.txt</xilinx:name>
+                     <xilinx:userFileType>ignore</xilinx:userFileType>
+                     <xilinx:userFileType>txtFlist</xilinx:userFileType>
+                     <xilinx:userFileType>txt</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:27:38 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0xDD3DCDB3</xilinx:checkSum>
+                  </xilinx:file>
+               </xilinx:fileSet>
+            </xilinx:generationHistory>
+         </spirit:vendorExtensions>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+         <spirit:instanceName>fifo_xlnx_512x36_2clk_prog_full</spirit:instanceName>
+         <spirit:displayName></spirit:displayName>
+         <spirit:description></spirit:description>
+         <spirit:componentRef spirit:vendor="xilinx.com" spirit:library="ip" spirit:name="fifo_generator" spirit:version="6.1" />
+         <spirit:configurableElementValues>
+            <spirit:configurableElementValue spirit:referenceId="parameter_almost_empty_flag">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_write_data_count">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_full_threshold_negate_value">499</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_empty_threshold_negate_value">5</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_output_data_width">36</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_input_depth">512</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_valid_flag">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_programmable_empty_type">No_Programmable_Empty_Threshold</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_write_acknowledge_flag">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_enable_int_clk">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_fifo_implementation">Independent_Clocks_Block_RAM</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_underflow_flag">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_use_extra_logic">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_full_flags_reset_value">1</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_valid_sense">Active_High</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_write_data_count_width">9</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_inject_dbit_error">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_data_count_width">9</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_output_depth">512</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_dout_reset_value">0</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_enable_reset_synchronization">true</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_reset_pin">true</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_underflow_sense">Active_High</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_overflow_sense">Active_High</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_overflow_flag">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_read_data_count">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_data_count">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_programmable_full_type">Single_Programmable_Full_Threshold_Constant</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_inject_sbit_error">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_read_data_count_width">9</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_reset_type">Asynchronous_Reset</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_performance_options">First_Word_Fall_Through</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_full_threshold_assert_value">500</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_use_dout_reset">true</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_almost_full_flag">true</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_use_embedded_registers">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_read_clock_frequency">1</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_write_acknowledge_sense">Active_High</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_disable_timing_violations">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_empty_threshold_assert_value">4</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_input_data_width">36</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_write_clock_frequency">1</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_enable_ecc">false</spirit:configurableElementValue>
+         </spirit:configurableElementValues>
+         <spirit:vendorExtensions>
+            <xilinx:instanceProperties xmlns:xilinx="http://www.xilinx.com">
+             <xilinx:projectOptions>
+               <xilinx:projectName>coregen</xilinx:projectName>
+               <xilinx:outputDirectory>./</xilinx:outputDirectory>
+               <xilinx:workingDirectory>./tmp/</xilinx:workingDirectory>
+               <xilinx:subWorkingDirectory>./tmp/_cg</xilinx:subWorkingDirectory>
+             </xilinx:projectOptions>
+             <xilinx:part>
+               <xilinx:device>xc6vlx240t</xilinx:device>
+               <xilinx:deviceFamily>virtex6</xilinx:deviceFamily>
+               <xilinx:package>ff1156</xilinx:package>
+               <xilinx:speedGrade>-1</xilinx:speedGrade>
+             </xilinx:part>
+             <xilinx:flowOptions>
+               <xilinx:busFormat>BusFormatAngleBracketNotRipped</xilinx:busFormat>
+               <xilinx:designEntry>Verilog</xilinx:designEntry>
+               <xilinx:asySymbol>true</xilinx:asySymbol>
+               <xilinx:flowVendor>Foundation_ISE</xilinx:flowVendor>
+               <xilinx:addPads>false</xilinx:addPads>
+               <xilinx:removeRPMs>false</xilinx:removeRPMs>
+               <xilinx:createNDF>false</xilinx:createNDF>
+               <xilinx:implementationFileType>Ngc</xilinx:implementationFileType>
+               <xilinx:formalVerification>false</xilinx:formalVerification>
+             </xilinx:flowOptions>
+             <xilinx:simulationOptions>
+               <xilinx:simulationModel>Behavioral</xilinx:simulationModel>
+               <xilinx:simulationLanguage>Verilog</xilinx:simulationLanguage>
+               <xilinx:foundationSym>false</xilinx:foundationSym>
+             </xilinx:simulationOptions>
+           </xilinx:instanceProperties>
+            <xilinx:generationHistory>
+               <xilinx:fileSet>
+                  <xilinx:name>apply_current_project_options_generator</xilinx:name>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>implementation_netlist_generator</xilinx:name>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_generator_ug175.pdf</xilinx:name>
+                     <xilinx:userFileType>pdf</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:29:11 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x6BFB733E</xilinx:checkSum>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_512x36_2clk_prog_full.asy</xilinx:name>
+                     <xilinx:userFileType>asy</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:27:39 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0xDE0493AC</xilinx:checkSum>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_512x36_2clk_prog_full.ngc</xilinx:name>
+                     <xilinx:userFileType>ngc</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:29:21 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x57A824D8</xilinx:checkSum>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_512x36_2clk_prog_full.sym</xilinx:name>
+                     <xilinx:userFileType>asy</xilinx:userFileType>
+                     <xilinx:userFileType>unknown</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:29:11 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x581B1E43</xilinx:checkSum>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_512x36_2clk_prog_full.v</xilinx:name>
+                     <xilinx:userFileType>verilog</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:29:11 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x7FF58B8E</xilinx:checkSum>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_512x36_2clk_prog_full.veo</xilinx:name>
+                     <xilinx:userFileType>veo</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:29:11 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x86D80992</xilinx:checkSum>
+                  </xilinx:file>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>instantiation_template_generator</xilinx:name>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>xco_generator</xilinx:name>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_512x36_2clk_prog_full.xco</xilinx:name>
+                     <xilinx:userFileType>xco</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:29:27 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0xBA9FCEA1</xilinx:checkSum>
+                  </xilinx:file>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>xmdf_generator</xilinx:name>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_512x36_2clk_prog_full_xmdf.tcl</xilinx:name>
+                     <xilinx:userFileType>tclXmdf</xilinx:userFileType>
+                     <xilinx:userFileType>tcl</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:29:27 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0xEFCBCE69</xilinx:checkSum>
+                  </xilinx:file>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>ise_generator</xilinx:name>
+                  <xilinx:file>
+                     <xilinx:name>./_xmsgs/pn_parser.xmsgs</xilinx:name>
+                     <xilinx:userFileType>ignore</xilinx:userFileType>
+                     <xilinx:userFileType>unknown</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:29:31 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x8D659649</xilinx:checkSum>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_512x36_2clk_prog_full.gise</xilinx:name>
+                     <xilinx:userFileType>ignore</xilinx:userFileType>
+                     <xilinx:userFileType>gise</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:29:32 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x88B1D09E</xilinx:checkSum>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_512x36_2clk_prog_full.xise</xilinx:name>
+                     <xilinx:userFileType>ignore</xilinx:userFileType>
+                     <xilinx:userFileType>xise</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:29:31 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0xF6E80476</xilinx:checkSum>
+                  </xilinx:file>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>deliver_readme_generator</xilinx:name>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_512x36_2clk_prog_full_readme.txt</xilinx:name>
+                     <xilinx:userFileType>ignore</xilinx:userFileType>
+                     <xilinx:userFileType>txtReadme</xilinx:userFileType>
+                     <xilinx:userFileType>txt</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:29:33 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0xD7B52A94</xilinx:checkSum>
+                  </xilinx:file>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>flist_generator</xilinx:name>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_512x36_2clk_prog_full_flist.txt</xilinx:name>
+                     <xilinx:userFileType>ignore</xilinx:userFileType>
+                     <xilinx:userFileType>txtFlist</xilinx:userFileType>
+                     <xilinx:userFileType>txt</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:29:33 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x472F92A8</xilinx:checkSum>
+                  </xilinx:file>
+               </xilinx:fileSet>
+            </xilinx:generationHistory>
+         </spirit:vendorExtensions>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+         <spirit:instanceName>fifo_xlnx_64x36_2clk</spirit:instanceName>
+         <spirit:displayName></spirit:displayName>
+         <spirit:description></spirit:description>
+         <spirit:componentRef spirit:vendor="xilinx.com" spirit:library="ip" spirit:name="fifo_generator" spirit:version="6.1" />
+         <spirit:configurableElementValues>
+            <spirit:configurableElementValue spirit:referenceId="parameter_almost_empty_flag">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_write_data_count">true</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_full_threshold_negate_value">62</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_empty_threshold_negate_value">5</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_output_data_width">36</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_input_depth">64</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_valid_flag">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_programmable_empty_type">No_Programmable_Empty_Threshold</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_write_acknowledge_flag">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_enable_int_clk">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_fifo_implementation">Independent_Clocks_Distributed_RAM</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_underflow_flag">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_use_extra_logic">true</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_full_flags_reset_value">1</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_valid_sense">Active_High</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_write_data_count_width">7</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_data_count_width">6</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_output_depth">64</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_dout_reset_value">0</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_reset_pin">true</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_underflow_sense">Active_High</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_overflow_sense">Active_High</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_overflow_flag">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_read_data_count">true</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_data_count">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_programmable_full_type">No_Programmable_Full_Threshold</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_read_data_count_width">7</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_reset_type">Asynchronous_Reset</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_performance_options">First_Word_Fall_Through</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_full_threshold_assert_value">63</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_use_dout_reset">true</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_almost_full_flag">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_use_embedded_registers">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_read_clock_frequency">1</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_write_acknowledge_sense">Active_High</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_disable_timing_violations">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_empty_threshold_assert_value">4</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_input_data_width">36</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_write_clock_frequency">1</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_enable_ecc">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_inject_dbit_error">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_enable_reset_synchronization">true</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="parameter_inject_sbit_error">false</spirit:configurableElementValue>
+         </spirit:configurableElementValues>
+         <spirit:vendorExtensions>
+            <xilinx:instanceProperties xmlns:xilinx="http://www.xilinx.com">
+             <xilinx:projectOptions>
+               <xilinx:projectName>coregen</xilinx:projectName>
+               <xilinx:outputDirectory>./</xilinx:outputDirectory>
+               <xilinx:workingDirectory>./tmp/</xilinx:workingDirectory>
+               <xilinx:subWorkingDirectory>./tmp/_cg</xilinx:subWorkingDirectory>
+             </xilinx:projectOptions>
+             <xilinx:part>
+               <xilinx:device>xc6vlx240t</xilinx:device>
+               <xilinx:deviceFamily>virtex6</xilinx:deviceFamily>
+               <xilinx:package>ff1156</xilinx:package>
+               <xilinx:speedGrade>-1</xilinx:speedGrade>
+             </xilinx:part>
+             <xilinx:flowOptions>
+               <xilinx:busFormat>BusFormatAngleBracketNotRipped</xilinx:busFormat>
+               <xilinx:designEntry>Verilog</xilinx:designEntry>
+               <xilinx:asySymbol>true</xilinx:asySymbol>
+               <xilinx:flowVendor>Foundation_ISE</xilinx:flowVendor>
+               <xilinx:addPads>false</xilinx:addPads>
+               <xilinx:removeRPMs>false</xilinx:removeRPMs>
+               <xilinx:createNDF>false</xilinx:createNDF>
+               <xilinx:implementationFileType>Ngc</xilinx:implementationFileType>
+               <xilinx:formalVerification>false</xilinx:formalVerification>
+             </xilinx:flowOptions>
+             <xilinx:simulationOptions>
+               <xilinx:simulationModel>Behavioral</xilinx:simulationModel>
+               <xilinx:simulationLanguage>Verilog</xilinx:simulationLanguage>
+               <xilinx:foundationSym>false</xilinx:foundationSym>
+             </xilinx:simulationOptions>
+           </xilinx:instanceProperties>
+            <xilinx:generationHistory>
+               <xilinx:fileSet>
+                  <xilinx:name>apply_current_project_options_generator</xilinx:name>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>implementation_netlist_generator</xilinx:name>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_generator_ug175.pdf</xilinx:name>
+                     <xilinx:userFileType>pdf</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:31:07 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x6BFB733E</xilinx:checkSum>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_64x36_2clk.asy</xilinx:name>
+                     <xilinx:userFileType>asy</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:29:34 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x9994CD5D</xilinx:checkSum>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_64x36_2clk.ngc</xilinx:name>
+                     <xilinx:userFileType>ngc</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:31:16 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x4AEDBA63</xilinx:checkSum>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_64x36_2clk.sym</xilinx:name>
+                     <xilinx:userFileType>asy</xilinx:userFileType>
+                     <xilinx:userFileType>unknown</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:31:07 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x24D41136</xilinx:checkSum>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_64x36_2clk.v</xilinx:name>
+                     <xilinx:userFileType>verilog</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:31:07 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x6C407B05</xilinx:checkSum>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_64x36_2clk.veo</xilinx:name>
+                     <xilinx:userFileType>veo</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:31:07 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x1F90FA66</xilinx:checkSum>
+                  </xilinx:file>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>instantiation_template_generator</xilinx:name>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>xco_generator</xilinx:name>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_64x36_2clk.xco</xilinx:name>
+                     <xilinx:userFileType>xco</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:31:22 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0xC6D1217E</xilinx:checkSum>
+                  </xilinx:file>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>xmdf_generator</xilinx:name>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_64x36_2clk_xmdf.tcl</xilinx:name>
+                     <xilinx:userFileType>tclXmdf</xilinx:userFileType>
+                     <xilinx:userFileType>tcl</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:31:22 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0xB9116D4C</xilinx:checkSum>
+                  </xilinx:file>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>ise_generator</xilinx:name>
+                  <xilinx:file>
+                     <xilinx:name>./_xmsgs/pn_parser.xmsgs</xilinx:name>
+                     <xilinx:userFileType>ignore</xilinx:userFileType>
+                     <xilinx:userFileType>unknown</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:31:26 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0xD0ED82F2</xilinx:checkSum>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_64x36_2clk.gise</xilinx:name>
+                     <xilinx:userFileType>ignore</xilinx:userFileType>
+                     <xilinx:userFileType>gise</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:31:26 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x7D7EEA68</xilinx:checkSum>
+                  </xilinx:file>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_64x36_2clk.xise</xilinx:name>
+                     <xilinx:userFileType>ignore</xilinx:userFileType>
+                     <xilinx:userFileType>xise</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:31:26 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x858FF549</xilinx:checkSum>
+                  </xilinx:file>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>deliver_readme_generator</xilinx:name>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_64x36_2clk_readme.txt</xilinx:name>
+                     <xilinx:userFileType>ignore</xilinx:userFileType>
+                     <xilinx:userFileType>txtReadme</xilinx:userFileType>
+                     <xilinx:userFileType>txt</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:31:26 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x861E4E89</xilinx:checkSum>
+                  </xilinx:file>
+               </xilinx:fileSet>
+               <xilinx:fileSet>
+                  <xilinx:name>flist_generator</xilinx:name>
+                  <xilinx:file>
+                     <xilinx:name>./fifo_xlnx_64x36_2clk_flist.txt</xilinx:name>
+                     <xilinx:userFileType>ignore</xilinx:userFileType>
+                     <xilinx:userFileType>txtFlist</xilinx:userFileType>
+                     <xilinx:userFileType>txt</xilinx:userFileType>
+                     <xilinx:timeStamp>五  1月 18 03:31:26 GMT 2013</xilinx:timeStamp>
+                     <xilinx:checkSum>0x43A83C96</xilinx:checkSum>
+                  </xilinx:file>
+               </xilinx:fileSet>
+            </xilinx:generationHistory>
+         </spirit:vendorExtensions>
+      </spirit:componentInstance>
+   </spirit:componentInstances>
+   <spirit:description></spirit:description>
+   <spirit:vendorExtensions>
+      <xilinx:instanceProperties xmlns:xilinx="http://www.xilinx.com">
+       <xilinx:projectOptions>
+         <xilinx:projectName>coregen</xilinx:projectName>
+         <xilinx:outputDirectory>./</xilinx:outputDirectory>
+         <xilinx:workingDirectory>./tmp/</xilinx:workingDirectory>
+         <xilinx:subWorkingDirectory>./tmp/_cg</xilinx:subWorkingDirectory>
+       </xilinx:projectOptions>
+       <xilinx:part>
+         <xilinx:device>xc6vlx240t</xilinx:device>
+         <xilinx:deviceFamily>virtex6</xilinx:deviceFamily>
+         <xilinx:package>ff1156</xilinx:package>
+         <xilinx:speedGrade>-1</xilinx:speedGrade>
+       </xilinx:part>
+       <xilinx:flowOptions>
+         <xilinx:busFormat>BusFormatAngleBracketNotRipped</xilinx:busFormat>
+         <xilinx:designEntry>Verilog</xilinx:designEntry>
+         <xilinx:asySymbol>true</xilinx:asySymbol>
+         <xilinx:flowVendor>Foundation_ISE</xilinx:flowVendor>
+         <xilinx:addPads>false</xilinx:addPads>
+         <xilinx:removeRPMs>false</xilinx:removeRPMs>
+         <xilinx:createNDF>false</xilinx:createNDF>
+         <xilinx:implementationFileType>Ngc</xilinx:implementationFileType>
+         <xilinx:formalVerification>false</xilinx:formalVerification>
+       </xilinx:flowOptions>
+       <xilinx:simulationOptions>
+         <xilinx:simulationModel>Behavioral</xilinx:simulationModel>
+         <xilinx:simulationLanguage>Verilog</xilinx:simulationLanguage>
+         <xilinx:foundationSym>false</xilinx:foundationSym>
+       </xilinx:simulationOptions>
+     </xilinx:instanceProperties>
+   </spirit:vendorExtensions>
+</spirit:design>
