@@ -247,12 +247,14 @@ module u2plus
    defparam DCM_INST.PHASE_SHIFT = 0;
    defparam DCM_INST.STARTUP_WAIT = "FALSE";
    */
+
+    //See Xilinx UG362 Virtex6 Clock Resource User Guide
     MMCM_BASE #(
     .BANDWIDTH("OPTIMIZED"), // Jitter programming ("HIGH","LOW","OPTIMIZED")
     .CLKFBOUT_MULT_F(5.0), // Multiply value for all CLKOUT (5.0-64.0).
     .CLKFBOUT_PHASE(0.0), // Phase offset in degrees of CLKFB (0.00-360.00).
     .CLKIN1_PERIOD(5.0), // Input clock period in ns to ps resolution (i.e. 33.333 is 30 MHz).
-    .CLKOUT0_DIVIDE_F(2.0), // Divide amount for CLKOUT0 (1.000-128.000).
+    .CLKOUT0_DIVIDE_F(1.0), // Divide amount for CLKOUT0 (1.000-128.000).
     // CLKOUT0_DUTY_CYCLE - CLKOUT6_DUTY_CYCLE: Duty cycle for each CLKOUT (0.01-0.99).
     .CLKOUT0_DUTY_CYCLE(0.5),
     .CLKOUT1_DUTY_CYCLE(0.5),
@@ -270,15 +272,15 @@ module u2plus
     .CLKOUT5_PHASE(0.0),
     .CLKOUT6_PHASE(0.0),
     // CLKOUT1_DIVIDE - CLKOUT6_DIVIDE: Divide amount for each CLKOUT (1-128)
-    .CLKOUT1_DIVIDE(2),
-    .CLKOUT2_DIVIDE(4),
-    .CLKOUT3_DIVIDE(2),
-    .CLKOUT4_DIVIDE(2),
-    .CLKOUT5_DIVIDE(2),
-    .CLKOUT6_DIVIDE(2),
+    .CLKOUT1_DIVIDE(1),
+    .CLKOUT2_DIVIDE(2),
+    .CLKOUT3_DIVIDE(1),
+    .CLKOUT4_DIVIDE(1),
+    .CLKOUT5_DIVIDE(1),
+    .CLKOUT6_DIVIDE(1),
     .CLKOUT4_CASCADE("FALSE"), // Cascase CLKOUT4 counter with CLKOUT6 (TRUE/FALSE)
     .CLOCK_HOLD("FALSE"), // Hold VCO Frequency (TRUE/FALSE)
-    .DIVCLK_DIVIDE(1), // Master division value (1-80)
+    .DIVCLK_DIVIDE(10), // Master division value (1-80)
     .REF_JITTER1(0.0), // Reference input jitter in UI (0.000-0.999).
     .STARTUP_WAIT("FALSE") // Not supported. Must be set to FALSE.
     )
@@ -314,9 +316,9 @@ module u2plus
    BUFG wbclk_BUFG (.I(clk_div), .O(wb_clk));
 
    // Create clock for external SRAM thats -90degree phase to DSPCLK (i.e) 2nS earlier at 100MHz.
+   /*
    BUFG  clk270_100_buf_i1 (.I(clk270_100), 
                 .O(clk270_100_buf));
-   /*
    OFDDRRSE RAM_CLK_i1 (.Q(RAM_CLK),
             .C0(clk270_100_buf),
             .C1(~clk270_100_buf),
