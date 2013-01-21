@@ -26,7 +26,7 @@ include ../../timing/Makefile.srcs
 include ../../opencores/Makefile.srcs
 include ../../vrt/Makefile.srcs
 include ../../udp/Makefile.srcs
-include ../../coregen/Makefile.srcs
+include ../../coregen_v6/Makefile.srcs
 include ../../extramfifo/Makefile.srcs
 
 

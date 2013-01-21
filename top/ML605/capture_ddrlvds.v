@@ -31,17 +31,20 @@ module capture_ddrlvds
    wire [(2*WIDTH)-1:0]    out_pre1;
    reg [(2*WIDTH)-1:0] 	   out_pre2;
    
-   IBUFGDS #(.IOSTANDARD("LVDS_33"), .DIFF_TERM("TRUE")) 
+   IBUFGDS #(.IOSTANDARD("LVDS_25"), .DIFF_TERM("TRUE")) 
    clkbuf (.O(ssclk), .I(ssclk_p), .IB(ssclk_n));
    
    genvar 	       i;
    generate
       for(i = 0; i < WIDTH; i = i + 1)
 	begin : gen_lvds_pins
-	   IBUFDS #(.IOSTANDARD("LVDS_33"),.DIFF_TERM("FALSE")) ibufds 
+	   IBUFDS #(.IOSTANDARD("LVDS_25"),.DIFF_TERM("FALSE")) ibufds 
 	      (.O(ddr_dat[i]), .I(in_p[i]), .IB(in_n[i]) );
-	   IDDR2 #(.DDR_ALIGNMENT("C1")) iddr2
-	     (.Q0(out_pre1[2*i]), .Q1(out_pre1[(2*i)+1]), .C0(ssclk), .C1(~ssclk),
+	   //IDDR2 #(.DDR_ALIGNMENT("C1")) iddr2
+	   //  (.Q0(out_pre1[2*i]), .Q1(out_pre1[(2*i)+1]), .C0(ssclk), .C1(~ssclk),
+	   //   .CE(1'b1), .D(ddr_dat[i]), .R(1'b0), .S(1'b0));
+	   IDDR #(.DDR_CLK_EDGE("OPPOSITE_EDGE")) iddr2
+	     (.Q1(out_pre1[2*i]), .Q2(out_pre1[(2*i)+1]), .C(ssclk), 
 	      .CE(1'b1), .D(ddr_dat[i]), .R(1'b0), .S(1'b0));
 	end
    endgenerate
