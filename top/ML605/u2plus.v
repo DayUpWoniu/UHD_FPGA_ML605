@@ -348,9 +348,12 @@ module u2plus
    IOBUF scl_pin(.O(scl_pad_i), .IO(SCL), .I(scl_pad_o), .T(scl_pad_oen_o));
    IOBUF sda_pin(.O(sda_pad_i), .IO(SDA), .I(sda_pad_o), .T(sda_pad_oen_o));
 
-   // LEDs are active low outputs
+   // --------OLD-UHD------LEDs are active low outputs
+   // On ML605 user LED is active high, so now XOR with 1
+   // On ML605 ETH_LED is active low
    wire [5:0] leds_int;
-   assign     {ETH_LED,leds} = {6'b011111 ^ leds_int};  // drive low to turn on leds
+   //assign     {ETH_LED,leds} = {6'b011111 ^ leds_int};  // drive low to turn on leds
+   assign     {ETH_LED,leds} = {6'b000000 ^ leds_int};  // drive low to turn on leds
    
    // SPI
    /*
