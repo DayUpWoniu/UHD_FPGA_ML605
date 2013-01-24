@@ -158,6 +158,11 @@ NET "FPGA_RESET"  LOC = "H10"  ;
 #NET "RXD<2>"  LOC = "AF15"  ;
 #NET "RXD<1>"  LOC = "AD12"  ;
 
+# FPGA Tx, USB Rx
+NET "TXD"  LOC = "J25"  ;
+# FPGA Rx, USB Tx
+NET "RXD"  LOC = "J24"  ;
+
 ## AD9510
 #NET "clk_status"  LOC = "AD22"  ;
 #NET "CLK_FUNC"  LOC = "AC21"  ;
@@ -248,12 +253,12 @@ NET "GMII_RX_ER"   LOC = "AG12"  ;
 NET "GMII_CRS"     LOC = "AL13"  ;
 NET "GMII_COL"     LOC = "AK13"  ;
 
-#NET "PHY_INTn"     LOC = "AH14"  ;
-NET "PHY_INT"      LOC = "AH14"  ;
+NET "PHY_INTn"     LOC = "AH14"  ;
+#NET "PHY_INT"      LOC = "AH14"  ;
 NET "MDIO"         LOC = "AN14"  ;
 NET "MDC"          LOC = "AP14"  ;
-#NET "PHY_RESETn"   LOC = "AH13"  ;
-NET "PHY_RESET"    LOC = "AH13"  ;
+NET "PHY_RESETn"   LOC = "AH13"  ;
+#NET "PHY_RESET"    LOC = "AH13"  ;
 NET "ETH_LED"      LOC = "AP24" ;
 #NET "ETH_LED"  LOC = "H20"  |IOSTANDARD = LVCMOS25  |DRIVE = 12  |SLEW = FAST ;
 

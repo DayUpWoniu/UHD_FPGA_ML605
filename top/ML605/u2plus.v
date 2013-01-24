@@ -56,6 +56,7 @@ module u2plus
    //output [1:0] debug_clk,
    //output [31:0] debug,
    //output [3:1] TXD, input [3:1] RXD, // UARTs
+   output TXD, input RXD, // UARTs
    //input [3:0] dipsw,  // Forgot DIP Switches...
    
    // Clock Gen Control
@@ -96,10 +97,10 @@ module u2plus
    input GMII_COL,
    input GMII_CRS,
 
-   input PHY_INT,   // open drain
+   input PHY_INTn,   // open drain
    inout MDIO,
    output MDC,
-   output PHY_RESET,
+   output PHY_RESETn,
    output ETH_LED
    
 //   input POR,
@@ -485,11 +486,6 @@ module u2plus
 
    wire     pps;
    assign pps = PPS_IN ^ PPS2_IN;
-   wire[3:1] UART_TRX;
-   wire PHY_INTn;
-   wire PHY_RESETn;
-   assign PHY_RESET = ~PHY_RESETn;
-   assign PHY_INTn = PHY_INT;
    
    u2plus_core u2p_c(.dsp_clk           (dsp_clk),
              .wb_clk            (wb_clk),
@@ -571,8 +567,8 @@ module u2plus
              //.RAM_WEn           (RAM_WEn),
              //.RAM_OEn           (RAM_OEn),
              //.RAM_LDn           (RAM_LDn), 
-             .uart_tx_o         (UART_TRX[3:1]),
-             .uart_rx_i         ({1'b1,UART_TRX[3:1]}),
+             .uart_tx_o         (TXD),
+             .uart_rx_i         ({3'b111,RXD}),
              .uart_baud_o       (),
              .sim_mode          (1'b0),
              .clock_divider     (2),
